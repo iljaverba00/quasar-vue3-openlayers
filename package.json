@@ -14,8 +14,12 @@
     "@quasar/extras": "^1.16.4",
     "core-js": "^3.6.5",
     "quasar": "^2.6.0",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "ol": "^9.1.0",
+    "ol-contextmenu": "^5.4.0",
+    "ol-ext": "^4.0.15",
+    "vue3-openlayers": ">=10.0.0",
+    "vue": "^3.4.21"
   },
   "devDependencies": {
     "@quasar/app-webpack": "^3.0.0"
