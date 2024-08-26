@@ -9,9 +9,6 @@
 // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js
 
 
-const ESLintPlugin = require('eslint-webpack-plugin')
-
-
 const { configure } = require('quasar/wrappers');
 
 module.exports = configure(function (ctx) {
@@ -73,10 +70,7 @@ module.exports = configure(function (ctx) {
       // https://v2.quasar.dev/quasar-cli-webpack/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
       
-      chainWebpack (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
-      }
+      chainWebpack (/* chain */) {}
       
     },
 
@@ -125,10 +119,7 @@ module.exports = configure(function (ctx) {
         // Tell browser when a file from the server should expire from cache (in ms)
 
       
-      chainWebpackWebserver (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
-      },
+      chainWebpackWebserver (/* chain */) {},
       
 
       middlewares: [
@@ -145,10 +136,7 @@ module.exports = configure(function (ctx) {
       // for the custom service worker ONLY (/src-pwa/custom-service-worker.[js|ts])
       // if using workbox in InjectManifest mode
       
-      chainWebpackCustomSW (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
-      },
+      chainWebpackCustomSW (/* chain */) {},
       
 
       manifest: {
@@ -224,17 +212,11 @@ module.exports = configure(function (ctx) {
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
       
-      chainWebpackMain (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
-      },
+      chainWebpackMain (/* chain */) {},
       
 
       
-      chainWebpackPreload (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
-      },
+      chainWebpackPreload (/* chain */) {},
       
     }
   }
